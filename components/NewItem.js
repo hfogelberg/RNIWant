@@ -10,6 +10,7 @@ import {
   GiftedForm,
   GiftedFormManager
 } from 'react-native-gifted-form';
+import RealmHelper from '../helpers/realmHelper';
 
 const NewItem = React.createClass({
   render() {
@@ -61,8 +62,11 @@ const NewItem = React.createClass({
 
         <GiftedForm.SeparatorWidget/>
 
-        <GiftedForm.SelectWidget name='gender' title='Type' multiple={false}>
-        <GiftedForm.OptionWidget title='Allowance' value='Allowance'/>
+        <GiftedForm.SelectWidget
+          name='itemType'
+          title='Type'
+          multiple={false}>
+          <GiftedForm.OptionWidget title='Allowance' value='Allowance'/>
           <GiftedForm.OptionWidget title='Object' value='Object'/>
           <GiftedForm.OptionWidget title='More Money' value='More Money'/>
           <GiftedForm.OptionWidget title='Activity' value='Activity'/>
@@ -74,11 +78,10 @@ const NewItem = React.createClass({
         <GiftedForm.SeparatorWidget />
 
         <GiftedForm.DatePickerIOSWidget
-          name='birthday'
+          name='boughtDate'
           mode='date'
-
           getDefaultDate={() => {
-            return new Date(((new Date()).getFullYear() - 18)+'');
+            return new Date();
           }}
         />
 
@@ -102,14 +105,15 @@ const NewItem = React.createClass({
             }
           }}
           onSubmit={(isValid, values, validationResults, postSubmit = null, modalNavigator = null) => {
-            if (isValid === true) {
-              console.log('Valid');
-              postSubmit();
-              GiftedFormManager.reset('locationForm');
-              this.saveFormData(values.caption, values.comment)
-            } else {
-              console.log('Not valid');
-            }
+            RealmHelper.saveItem(values);
+            // if (isValid === true) {
+            //   console.log('Valid');
+            //   postSubmit();
+            //   GiftedFormManager.reset('locationForm');
+            //   this.saveFormData(values.caption, values.comment)
+            // } else {
+            //   console.log('Not valid');
+            // }
           }}
         />
       </GiftedForm>
