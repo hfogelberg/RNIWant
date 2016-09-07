@@ -1,6 +1,7 @@
 import React from 'react';
 import Realm from 'realm';
 import Moment from 'moment';
+import _ from 'underscore';
 
 let realm = new Realm({
   schema: [{
@@ -31,5 +32,10 @@ export default class RealmHelper {
         status: 'NEW'
       })
     })
+  }
+
+  static getItems() {
+    let items = realm.objects('Items');
+    return items;
   }
 }

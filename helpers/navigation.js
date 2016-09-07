@@ -5,6 +5,10 @@ module.export = function(scene) {
     'NewItem': {
       title: 'NewItem',
       id: 'NewItem'
+    },
+    'Items': {
+      title: 'Items',
+      id: 'Items'
     }
   }
 
