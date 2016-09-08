@@ -17,8 +17,8 @@ class App extends Component{
           ref={(ref) => this._navigator = ref}
           configureScene={(route) => Navigator.SceneConfigs.FloatFromLeft}
           initialRoute={{
-              id: 'Items',
-              title: 'Items',
+              id: 'NewItem',
+              title: 'NewItem',
               index: 0
           }}
           renderScene={(route, navigator) => this._renderScene(route, navigator)}

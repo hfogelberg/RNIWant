@@ -18,20 +18,26 @@ let realm = new Realm({
 
 
 export default class RealmHelper {
-  static saveItem(values) {
+  static saveItem(item) {
+    console.log('saveItem:' + item);
+    console.log(item.caption);
     console.log('Realm file path: ' + realm.path);
-    let theCost = parseFloat(values.cost);
+    let theCost = parseFloat(item.cost);
 
-    realm.write(() => {
-      realm.create('Items', {
-        caption: values.caption,
-        comment: values.comment,
-        boughtDate: values.boughtDate,
-        cost: theCost,
-        itemType: values.itemType[0],
-        status: 'NEW'
+    try{
+      realm.write(() => {
+        realm.create('Items', {
+          caption: item.caption,
+          comment: item.comment,
+          boughtDate: item.boughtDate,
+          cost: theCost,
+          itemType: item.itemType,
+          status: 'NEW'
+        })
       })
-    })
+    } catch(err) {
+      console.log('Error saving to Realm', err );
+    }
   }
 
   static getItems() {
