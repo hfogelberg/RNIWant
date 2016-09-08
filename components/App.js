@@ -17,8 +17,8 @@ class App extends Component{
           ref={(ref) => this._navigator = ref}
           configureScene={(route) => Navigator.SceneConfigs.FloatFromLeft}
           initialRoute={{
-              id: 'NewItem',
-              title: 'NewItem',
+              id: 'Items',
+              title: 'Items',
               index: 0
           }}
           renderScene={(route, navigator) => this._renderScene(route, navigator)}
@@ -47,7 +47,7 @@ class App extends Component{
     },
 
   RightButton(route, navigator, index, navState) {
-    return null;
+        return null;
   },
 
   Title(route, navigator, index, navState) {

@@ -72,4 +72,31 @@ export default StyleSheet.create({
     borderWidth: 1,
     flex: 1
   },
+  itemsContainer: {
+    flex: 7,
+    marginLeft: 20,
+    alignSelf: 'stretch',
+    alignItems: 'stretch'
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
+    marginBottom: 8
+  },
+  itemText: {
+    fontSize: 16
+  },
+  itemsListHeader: {
+    marginTop: 70,
+    flex: 1,
+    marginRight: 30,
+    marginBottom: 30,
+    alignItems: 'flex-end'
+  },
+  addItemBtn: {
+  },
+  itemsList: {
+    backgroundColor: 'yellow'
+  }
 });

@@ -3,7 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  Navigator
+  Navigator,
+  TouchableOpacity
 } from 'react-native';
 import styles from '../styles/styles';
 import RealmHelper from '../helpers/realmHelper';
@@ -24,23 +25,42 @@ class Items extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {this.iterateItems()}
+      <View>
+        <View style={styles.itemsListHeader}>
+          <TouchableOpacity
+            onPress={this.addItemPressed.bind(this)}>
+            <Text style={styles.addItemBtn}>New Item</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.itemsContainer}>
+          {this.iterateItems()}
+        </View>
       </View>
     )
   }
 
   iterateItems() {
-  if (this.state.items.length > 0) {
-    return this.state.items.map((item) => {
-      return (
-        <View key={item.boughtDate} >
-          <Text>{item.caption}</Text>
-        </View>
-      )
-    });
+    if (this.state.items.length > 0) {
+      return this.state.items.map((item) => {
+        return (
+          <View
+            style={styles.item}
+            key={item.caption} >
+            <Text style={styles.itemText}>{item.caption}</Text>
+          </View>
+        )
+      });
+    }
+  }
+
+  addItemPressed() {
+    this.props.navigator.push({
+     id: 'NewItem'
+   });
   }
 }
-}
+
+
 
 export default Items;

@@ -112,6 +112,7 @@ const NewItem = React.createClass({
     };
     console.log(item);
     RealmHelper.saveItem(item);
+    this.props.navigator.pop();
   }
 })
 
