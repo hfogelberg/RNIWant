@@ -89,6 +89,7 @@ export default StyleSheet.create({
   },
   itemsListHeader: {
     marginTop: 70,
+    backgroundColor: 'green',
     flex: 1,
     marginRight: 30,
     marginBottom: 30,
