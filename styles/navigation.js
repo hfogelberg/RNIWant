@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   navBar: {
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'orange'
   },
   navBarText: {
     fontSize: 16,
@@ -14,7 +15,7 @@ export default StyleSheet.create({
     marginVertical: 9,
   },
   navBarLeftButton: {
-    paddingLeft: 10,
+    paddingLeft: 10
   },
   navBarRightButton: {
     padding: 10,

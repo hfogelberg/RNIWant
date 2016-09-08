@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
   View,
   Text,
+  TouchableOpacity,
   Navigator,
   StyleSheet
 } from 'react-native';
@@ -43,7 +44,18 @@ class App extends Component{
 
   const NavigationBarRouteMapper = {
     LeftButton(route, navigator, index, navState) {
-      return null;
+      switch (route.id) {
+        case 'NewItem':
+          return (
+              <TouchableOpacity
+                  style={styles.navBarLeftButton}
+                  onPress={() => {navigator.pop()}}>
+                  <Text>Back</Text>
+              </TouchableOpacity>
+          )
+        default:
+          return null;
+      }
     },
 
   RightButton(route, navigator, index, navState) {
