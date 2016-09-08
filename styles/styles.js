@@ -51,5 +51,25 @@ export default StyleSheet.create({
   },
   disabledButton: {
     color: 'red'
-  }
+  },
+  groupContainer: {
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent: 'center'
+  },
+  groupLabel: {
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flex: 2
+  },
+  groupInput: {
+    justifyContent: 'flex-end',
+    height: 40,
+    borderColor: 'grey',
+    borderWidth: 1,
+    flex: 1
+  },
 });

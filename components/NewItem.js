@@ -13,6 +13,7 @@ import ModalPicker from 'react-native-modal-picker';
 import Button from 'react-native-button';
 
 const NewItem = React.createClass({
+
   getInitialState: function() {
     return {
       caption: '',
@@ -44,36 +45,42 @@ const NewItem = React.createClass({
         <TextInput
           placeholder="Some text"
           style={styles.textInput}
-          autoCapitalize={sentences}
+          autoCapitalize="sentences"
           autoCorrect={false}
          onChangeText={(caption) => this.setState({caption})}/>
         <Text style={styles.textLabel}>Comment</Text>
         <TextInput
           style={styles.multiline}
           placeholder="Some text"
-          autoCapitalize={sentences}
+          autoCapitalize="sentences"
           autoCorrect={false}
           multiline={true}
           numberOfLines={6}
           onChangeText={(comment) => this.setState({comment})}/>
-        <Text style={styles.textLabel}>Value or amount</Text>
-        <TextInput
-          style={styles.textInput}
-          autoCorrect={false}
-          onChangeText={(amount) => this.setState({amount})}/>
-        <Text style={styles.textLabel }>Date</Text>
-        <DatePicker
-          style={styles.datePicker}
-          mode="date"
-          date={this.state.date}
-          onDateChange={(date) => {this.setState({date: date})}}
-          placeholder="placeholder"
-          format="YYYY-MM-DD"
-          minDate="2016-09-01"
-          maxDate="2017-09-01"
-          confirmBtnText="Confirm"
-          cancelBtnText="Cancel"
-        />
+
+        <View style={styles.groupContainer}>
+          <Text style={styles.groupLabel}>Value or amount</Text>
+          <TextInput
+            style={styles.groupInput}
+            placeholder="Some text"
+            onChangeText={(amount) => this.setState({amount})}/>
+        </View>
+
+        <View style={styles.groupContainer}>
+          <Text style={styles.groupLabel}>Date</Text>
+          <DatePicker
+            style={styles.groupInput}
+            mode="date"
+            date={this.state.date}
+            onDateChange={(date) => {this.setState({date: date})}}
+            placeholder="placeholder"
+            format="YYYY-MM-DD"
+            minDate="2016-09-01"
+            maxDate="2017-09-01"
+            confirmBtnText="Confirm"
+            cancelBtnText="Cancel"
+          />
+        </View>
 
         <ModalPicker
             style={styles.picker}
