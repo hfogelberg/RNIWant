@@ -21,6 +21,7 @@ export default class RealmHelper {
   static saveItem(item) {
     console.log('saveItem:' + item);
     console.log(item.caption);
+    console.log(item.boughtDate);
     console.log('Realm file path: ' + realm.path);
     let theCost = parseFloat(item.cost);
 

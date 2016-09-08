@@ -17,7 +17,7 @@ const NewItem = React.createClass({
     return {
       caption: '',
       comment: '',
-      date: '',
+      date: new Date(),
       amount: 0,
       giftType: ''
     };
@@ -44,23 +44,28 @@ const NewItem = React.createClass({
         <TextInput
           placeholder="Some text"
           style={styles.textInput}
+          autoCapitalize={sentences}
+          autoCorrect={false}
          onChangeText={(caption) => this.setState({caption})}/>
         <Text style={styles.textLabel}>Comment</Text>
         <TextInput
           style={styles.multiline}
           placeholder="Some text"
+          autoCapitalize={sentences}
+          autoCorrect={false}
           multiline={true}
           numberOfLines={6}
           onChangeText={(comment) => this.setState({comment})}/>
         <Text style={styles.textLabel}>Value or amount</Text>
         <TextInput
           style={styles.textInput}
-          keyboardType="numeric"
+          autoCorrect={false}
           onChangeText={(amount) => this.setState({amount})}/>
         <Text style={styles.textLabel }>Date</Text>
         <DatePicker
           style={styles.datePicker}
           mode="date"
+          date={this.state.date}
           onDateChange={(date) => {this.setState({date: date})}}
           placeholder="placeholder"
           format="YYYY-MM-DD"
@@ -89,10 +94,12 @@ const NewItem = React.createClass({
   },
 
   saveItem: function() {
+    let boughtDate = new Date(this.state.date);
+
     let item = {
       caption: this.state.caption,
       comment: this.state.comment,
-      boughtDate: this.state.date,
+      boughtDate: boughtDate,
       cost: this.state.amount,
       itemType: this.state.giftType
     };
