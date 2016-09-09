@@ -22,9 +22,9 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		C2EC568FED73462B960AC507 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0693039B794472E894D6057 /* libRealmReact.a */; };
-		F524EFF99B9A4F70ACF927E7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D894F6871340EF825E3F06 /* libc++.tbd */; };
-		F41E29A83A9548B5B7308DDF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E343463B6F4D3FB84B6585 /* libz.tbd */; };
+		1F1B81F348B344C59599AFFF /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AC93E97A7E4C1885FE0DDA /* libRealmReact.a */; };
+		1A96C9491EEB4A1BAEC14246 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA84EE4784B547A781EBC64D /* libc++.tbd */; };
+		87555EFE87224431AFCAE53D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB2C8D7BCF441639F9F1A2F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,10 +129,10 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = ../node_modules/react-native/React/React.xcodeproj; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = ../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = ../node_modules/react-native/Libraries/Text/RCTText.xcodeproj; sourceTree = "<group>"; };
-		85244FF01BB642519DA0B6A5 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; name = "RealmReact.xcodeproj"; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		A0693039B794472E894D6057 /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		A3D894F6871340EF825E3F06 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		93E343463B6F4D3FB84B6585 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		CC1812E0EF5747218455B551 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; name = "RealmReact.xcodeproj"; path = "../node_modules/Realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D2AC93E97A7E4C1885FE0DDA /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BA84EE4784B547A781EBC64D /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		ABB2C8D7BCF441639F9F1A2F /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +158,9 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				C2EC568FED73462B960AC507 /* libRealmReact.a in Frameworks */,
-				F524EFF99B9A4F70ACF927E7 /* libc++.tbd in Frameworks */,
-				F41E29A83A9548B5B7308DDF /* libz.tbd in Frameworks */,
+				1F1B81F348B344C59599AFFF /* libRealmReact.a in Frameworks */,
+				1A96C9491EEB4A1BAEC14246 /* libc++.tbd in Frameworks */,
+				87555EFE87224431AFCAE53D /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +283,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				85244FF01BB642519DA0B6A5 /* RealmReact.xcodeproj */,
+				CC1812E0EF5747218455B551 /* RealmReact.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNIWantTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				34FD07E5EB9341FC8E9DB400 /* Frameworks */,
+				1DDEE22242444ED9A151091D /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -318,11 +318,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		34FD07E5EB9341FC8E9DB400 /* Frameworks */ = {
+		1DDEE22242444ED9A151091D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3D894F6871340EF825E3F06 /* libc++.tbd */,
-				93E343463B6F4D3FB84B6585 /* libz.tbd */,
+				BA84EE4784B547A781EBC64D /* libc++.tbd */,
+				ABB2C8D7BCF441639F9F1A2F /* libz.tbd */,
 			);
 			name = Frameworks;
 			path = "";
@@ -640,7 +640,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/Realm/src/**",
 				);
 				INFOPLIST_FILE = "RNIWant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,7 +661,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/Realm/src/**",
 				);
 				INFOPLIST_FILE = "RNIWant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -712,7 +712,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/Realm/src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -753,7 +753,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/Realm/src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
