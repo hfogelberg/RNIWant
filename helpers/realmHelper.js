@@ -19,6 +19,8 @@ let realm = new Realm({
 
 export default class RealmHelper {
   static saveItem(item) {
+    let id = (new Date).getTime().toString();
+    console.log('ID: ' + id);
     console.log('saveItem:' + item);
     console.log(item.caption);
     console.log(item.boughtDate);
@@ -28,6 +30,7 @@ export default class RealmHelper {
     try{
       realm.write(() => {
         realm.create('Items', {
+          id: id,
           caption: item.caption,
           comment: item.comment,
           boughtDate: item.boughtDate,

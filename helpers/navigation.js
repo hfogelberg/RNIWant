@@ -22,6 +22,10 @@ module.exports = function (scene) {
         'Stats': {
           title: 'Settings Page',
           id: 'Settings'
+        },
+        'ShowItem': {
+          title: 'Show item',
+          id: 'ShowItem'
         }
     }
 

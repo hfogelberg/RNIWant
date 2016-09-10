@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import styles from '../styles/styles';
 import RealmHelper from '../helpers/realmHelper';
+import ShowItem from './ShowItem';
 
 class Items extends Component {
   constructor(props) {
@@ -47,11 +48,23 @@ class Items extends Component {
           <View
             style={styles.item}
             key={item.caption} >
-            <Text style={styles.itemText}>{item.caption}</Text>
+            <TouchableOpacity onPress={() => this.onItemPress(item)}>
+              <Text style={styles.itemText}>{item.caption}</Text>
+            </TouchableOpacity>
           </View>
         )
       });
     }
+  }
+
+  onItemPress(item) {
+    console.log('onItemPress: ' + item.caption);
+    this.props.navigator.push({
+     id: 'ShowItem',
+     passProps: {
+       item: item
+     }
+   });
   }
 
   addItemPressed() {
@@ -60,7 +73,5 @@ class Items extends Component {
    });
   }
 }
-
-
 
 export default Items;
