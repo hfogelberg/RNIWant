@@ -15,7 +15,6 @@ const ShowItem = React.createClass({
     };
   },
 
-
   componentDidMount: function() {
     console.log('ShowItem componentDidMount');
     console.log(this.props.item.caption);
@@ -27,12 +26,12 @@ const ShowItem = React.createClass({
   render() {
     return (
       <View style = {styles.container}>
-          <Text style={styles.text}>{this.props.item.caption}</Text>
-          <Text style={styles.text}>{this.props.item.comment}</Text>
-          <Text style={styles.text}>{this.state.date}</Text>
-          <Text style={styles.text}>{this.props.item.cost}</Text>
-          <Text style={styles.text}>{this.props.item.itemType}</Text>
-        </View>
+        <Text style={styles.text}>{this.props.item.caption}</Text>
+        <Text style={styles.text}>{this.props.item.comment}</Text>
+        <Text style={styles.text}>{this.state.date}</Text>
+        <Text style={styles.text}>{this.props.item.cost}</Text>
+        <Text style={styles.text}>{this.props.item.itemType}</Text>
+      </View>
     )
   }
 })

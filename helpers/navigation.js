@@ -26,6 +26,10 @@ module.exports = function (scene) {
         'ShowItem': {
           title: 'Show item',
           id: 'ShowItem'
+        },
+        'NewItemType': {
+          title: 'New Item Type',
+          id: 'NewItemType'
         }
     }
 

@@ -19,6 +19,7 @@ import About from './About';
 import Settings from './Settings';
 import Stats from './Stats';
 import ShowItem from './ShowItem';
+import NewItemType from './NewItemType';
 
 let _emitter = new EventEmitter();
 
@@ -91,6 +92,8 @@ class App extends Component {
             return (<Stats navigator={navigator} />);
           case 'ShowItem':
             return (<ShowItem navigator={navigator} {...route.passProps}/>)
+          case 'NewItemType':
+            return (<NewItemType navigator={NewItemType} />);
         }
     }
 }

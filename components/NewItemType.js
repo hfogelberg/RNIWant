@@ -3,21 +3,20 @@ import {
   StyleSheet,
   View,
   Text,
-  Navigator,
-  TouchableOpacity
+  Navigator
 } from 'react-native';
 import styles from '../styles/styles';
 
-class Settings extends Component {
+class NewItemType extends Component {
   render() {
     return (
       <View style = {styles.container}>
         <Text style={styles.text}>
-          Settings Page
+          NewItemType Page
         </Text>
       </View>
     )
   }
 }
 
-module.exports = Settings;
+module.exports = NewItemType;
